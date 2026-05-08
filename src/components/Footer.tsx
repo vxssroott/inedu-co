@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail } from "lucide-react";
+import logoImg from "@/assets/inedu-logo.jpeg";
 
 export function Footer() {
   return (
@@ -8,11 +9,8 @@ export function Footer() {
       <div className="container-pro py-16 grid gap-12 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3 mb-5">
-            <div className="relative h-12 w-12 shrink-0">
-              <div className="absolute inset-0 rounded-sm bg-white/10 border border-white/20 flex items-center justify-center">
-                <span className="font-serif text-white text-lg font-bold">IPS</span>
-              </div>
-              <div className="absolute -bottom-0.5 left-1 right-1 h-0.5 bg-secondary" />
+            <div className="h-14 w-14 shrink-0 rounded-sm overflow-hidden bg-black ring-1 ring-white/15">
+              <img src={logoImg} alt="INEDU & CO logo" className="h-full w-full object-cover" width={56} height={56} />
             </div>
             <div className="leading-tight">
               <div className="font-serif text-lg font-bold text-white">INEDU & CO</div>

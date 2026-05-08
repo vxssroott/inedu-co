@@ -1,13 +1,40 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Award, Users } from "lucide-react";
+import { ArrowRight, ShieldCheck, Award, Users, BadgeCheck, Check } from "lucide-react";
 import heroImg from "@/assets/hero-skyline.jpg";
+import logoImg from "@/assets/inedu-logo.jpeg";
 import { ExecutiveContactCard } from "@/components/ExecutiveContactCard";
-import { ServiceCard } from "@/components/ServiceCard";
-import { services, WHATSAPP_URL } from "@/lib/services";
+import { WHATSAPP_URL } from "@/lib/services";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
+
+const whatWeDo: { title: string; detail?: string }[] = [
+  {
+    title: "Professional Services",
+    detail:
+      "Training on Address Verification (AVR), Internal Control, Collections and Recovery Etc.",
+  },
+  {
+    title: "Management & Business Consultancy",
+    detail: "Audited Financial Statements, Financial Advisory Services Etc.",
+  },
+  { title: "Debt Recovery & Portfolio Resolution" },
+  {
+    title: "Commission Agency Services",
+    detail:
+      "Sale and purchase of MFB operating licenses, Trade Finance Instruments Deals, PSSP Acquisition, General Commission involved deals. Etc.",
+  },
+  { title: "Business & Address Verifications" },
+  { title: "Loan Facilitation and Credit Support. Etc." },
+];
+
+const trustValues = [
+  { icon: BadgeCheck, t: "Professionalism", d: "Senior-level execution and reliable expert service delivery" },
+  { icon: ShieldCheck, t: "Confidentiality", d: "Strict client privacy and trusted handling of sensitive matters" },
+  { icon: Award, t: "Compliance", d: "Ethical, regulated, and professionally guided operations" },
+  { icon: Users, t: "Executive Expertise", d: "Senior-led engagements and strategic decision support" },
+];
 
 function Index() {
   return (
@@ -58,7 +85,15 @@ function Index() {
             </div>
 
             <div className="lg:col-span-5">
-              <ExecutiveContactCard />
+              <div className="relative">
+                <img
+                  src={logoImg}
+                  alt=""
+                  aria-hidden="true"
+                  className="pointer-events-none select-none absolute -top-10 -right-6 w-40 opacity-20 blur-[1px]"
+                />
+                <ExecutiveContactCard />
+              </div>
             </div>
           </div>
         </div>
@@ -66,19 +101,15 @@ function Index() {
 
       {/* TRUST STRIP */}
       <section className="bg-primary-deep text-white border-y border-white/10">
-        <div className="container-pro py-10 grid sm:grid-cols-3 gap-8">
-          {[
-            { icon: ShieldCheck, t: "Confidentiality", d: "Strict client privacy" },
-            { icon: Award, t: "Compliance", d: "Ethical & regulated practice" },
-            { icon: Users, t: "Executive Expertise", d: "Senior-led engagements" },
-          ].map((i) => (
-            <div key={i.t} className="flex items-center gap-4">
+        <div className="container-pro py-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {trustValues.map((i) => (
+            <div key={i.t} className="flex items-start gap-4">
               <div className="h-12 w-12 rounded-sm bg-white/10 border border-white/15 flex items-center justify-center shrink-0">
                 <i.icon className="h-5 w-5 text-white" />
               </div>
               <div>
-                <div className="font-serif text-lg font-bold">{i.t}</div>
-                <div className="text-sm text-white/70">{i.d}</div>
+                <div className="font-serif text-lg font-bold leading-tight">{i.t}</div>
+                <div className="text-sm text-white/70 mt-1 leading-relaxed">{i.d}</div>
               </div>
             </div>
           ))}
@@ -120,29 +151,57 @@ function Index() {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="py-20 lg:py-28 bg-accent/30">
-        <div className="container-pro">
-          <div className="max-w-3xl mb-14">
+      {/* WHAT WE DO */}
+      <section className="relative py-20 lg:py-28 bg-accent/30 overflow-hidden">
+        {/* subtle logo watermark */}
+        <img
+          src={logoImg}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute -right-20 -bottom-20 w-[420px] opacity-[0.04]"
+        />
+        <div className="relative container-pro grid lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-4">
             <div className="eyebrow mb-5">What We Do</div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               Our Professional Services
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Our services are designed to support businesses, organizations, and
-              individuals with reliable, strategic, and professional solutions.
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8">
+              To provide professional services, such as:
             </p>
+            <Link to="/services" className="btn-primary">
+              View All Services <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s) => (
-              <ServiceCard key={s.number} service={s} />
-            ))}
+          <div className="lg:col-span-8">
+            <ul className="grid sm:grid-cols-2 gap-5">
+              {whatWeDo.map((item) => (
+                <li
+                  key={item.title}
+                  className="group bg-card border border-border rounded-sm p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-[var(--shadow-card)]"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-sm bg-[var(--gradient-primary)] text-white shrink-0">
+                      <Check className="h-4 w-4" strokeWidth={3} />
+                    </span>
+                    <div>
+                      <h3 className="font-serif text-lg font-bold text-foreground leading-snug">
+                        {item.title}
+                      </h3>
+                      {item.detail && (
+                        <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                          {item.detail}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
-
-      {/* CTA STRIP */}
       <section className="relative py-20 lg:py-24 bg-[var(--gradient-primary)] overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_30%,white,transparent_60%)]" />
         <div className="relative container-pro grid lg:grid-cols-2 gap-10 items-center">

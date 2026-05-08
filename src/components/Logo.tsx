@@ -1,16 +1,19 @@
 import { Link } from "@tanstack/react-router";
+import logoImg from "@/assets/inedu-logo.jpeg";
 
 export function Logo({ variant = "dark" }: { variant?: "dark" | "light" }) {
   const text = variant === "light" ? "text-white" : "text-foreground";
   const sub = variant === "light" ? "text-white/70" : "text-muted-foreground";
   return (
     <Link to="/" className="flex items-center gap-3 group">
-      <div className="relative h-12 w-12 shrink-0">
-        <div className="absolute inset-0 rounded-sm bg-[var(--gradient-primary)] shadow-[var(--shadow-elegant)]" />
-        <div className="absolute inset-[2px] rounded-sm border border-white/20 flex items-center justify-center">
-          <span className="font-serif text-white text-lg font-bold tracking-tight">IPS</span>
-        </div>
-        <div className="absolute -bottom-0.5 left-1 right-1 h-0.5 bg-secondary" />
+      <div className="relative h-12 w-12 shrink-0 rounded-sm overflow-hidden bg-black ring-1 ring-border">
+        <img
+          src={logoImg}
+          alt="INEDU & CO Professional Services logo"
+          className="h-full w-full object-cover"
+          width={48}
+          height={48}
+        />
       </div>
       <div className="leading-tight">
         <div className={`font-serif text-base sm:text-lg font-bold tracking-tight ${text}`}>
