@@ -3,7 +3,7 @@ import { ArrowRight, ShieldCheck, Award, Users, BadgeCheck, Check } from "lucide
 import heroImg from "@/assets/hero-skyline.jpg";
 import logoImg from "@/assets/inedu-logo.jpeg";
 import { ExecutiveContactCard } from "@/components/ExecutiveContactCard";
-import { services, WHATSAPP_URL } from "@/lib/services";
+import { WHATSAPP_URL } from "@/lib/services";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -85,7 +85,15 @@ function Index() {
             </div>
 
             <div className="lg:col-span-5">
-              <ExecutiveContactCard />
+              <div className="relative">
+                <img
+                  src={logoImg}
+                  alt=""
+                  aria-hidden="true"
+                  className="pointer-events-none select-none absolute -top-10 -right-6 w-40 opacity-20 blur-[1px]"
+                />
+                <ExecutiveContactCard />
+              </div>
             </div>
           </div>
         </div>
