@@ -1,13 +1,40 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Award, Users } from "lucide-react";
+import { ArrowRight, ShieldCheck, Award, Users, BadgeCheck, Check } from "lucide-react";
 import heroImg from "@/assets/hero-skyline.jpg";
+import logoImg from "@/assets/inedu-logo.jpeg";
 import { ExecutiveContactCard } from "@/components/ExecutiveContactCard";
-import { ServiceCard } from "@/components/ServiceCard";
 import { services, WHATSAPP_URL } from "@/lib/services";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
+
+const whatWeDo: { title: string; detail?: string }[] = [
+  {
+    title: "Professional Services",
+    detail:
+      "Training on Address Verification (AVR), Internal Control, Collections and Recovery Etc.",
+  },
+  {
+    title: "Management & Business Consultancy",
+    detail: "Audited Financial Statements, Financial Advisory Services Etc.",
+  },
+  { title: "Debt Recovery & Portfolio Resolution" },
+  {
+    title: "Commission Agency Services",
+    detail:
+      "Sale and purchase of MFB operating licenses, Trade Finance Instruments Deals, PSSP Acquisition, General Commission involved deals. Etc.",
+  },
+  { title: "Business & Address Verifications" },
+  { title: "Loan Facilitation and Credit Support. Etc." },
+];
+
+const trustValues = [
+  { icon: BadgeCheck, t: "Professionalism", d: "Senior-level execution and reliable expert service delivery" },
+  { icon: ShieldCheck, t: "Confidentiality", d: "Strict client privacy and trusted handling of sensitive matters" },
+  { icon: Award, t: "Compliance", d: "Ethical, regulated, and professionally guided operations" },
+  { icon: Users, t: "Executive Expertise", d: "Senior-led engagements and strategic decision support" },
+];
 
 function Index() {
   return (
