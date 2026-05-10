@@ -54,16 +54,19 @@ export function Footer() {
             <div className="text-white font-semibold">Prince Sunny Inedu</div>
             <div className="text-white/60 text-xs uppercase tracking-wider mb-3">MD/CEO</div>
             <a href="tel:+2348033243379" className="flex items-center gap-2 hover:text-white">
-              <Phone className="h-3.5 w-3.5" /> 0803 324 3379
+              <Phone className="h-3.5 w-3.5" />
+              <span>0803 324 3379</span>
             </a>
             <a href="tel:+2348117917844" className="flex items-center gap-2 hover:text-white">
-              <Phone className="h-3.5 w-3.5" /> 0811 791 7844
+              <Phone className="h-3.5 w-3.5" />
+              <span>0811 791 7844</span>
             </a>
             <a
               href="mailto:richsunny24@gmail.com"
               className="flex items-center gap-2 hover:text-white break-all"
             >
-              <Mail className="h-3.5 w-3.5 shrink-0" /> richsunny24@gmail.com
+              <Mail className="h-3.5 w-3.5 shrink-0" />
+              <span>richsunny24@gmail.com</span>
             </a>
           </div>
         </div>
