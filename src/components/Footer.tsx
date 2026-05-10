@@ -5,7 +5,7 @@ import logoImg from "@/assets/inedu-logo.jpeg";
 export function Footer() {
   return (
     <footer className="bg-[oklch(0.12_0.06_265)] text-white/80">
-      <div className="h-1 bg-[var(--gradient-accent-bar)]" />
+      <div className="h-1 bg-brand-accent-bar" />
       <div className="container-pro py-16 grid gap-12 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3 mb-5">
