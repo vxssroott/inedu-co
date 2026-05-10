@@ -49,7 +49,7 @@ function Index() {
             width={1920}
             height={1088}
           />
-          <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
+          <div className="absolute inset-0 bg-brand-hero" />
         </div>
 
         <div className="relative container-pro pt-24 pb-32 lg:pt-32 lg:pb-40">
@@ -182,7 +182,7 @@ function Index() {
                   className="group bg-card border border-border rounded-sm p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-[var(--shadow-card)]"
                 >
                   <div className="flex items-start gap-4">
-                    <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-sm bg-[var(--gradient-primary)] text-white shrink-0">
+                    <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-sm bg-brand-primary text-white shrink-0">
                       <Check className="h-4 w-4" strokeWidth={3} />
                     </span>
                     <div>
@@ -202,7 +202,7 @@ function Index() {
           </div>
         </div>
       </section>
-      <section className="relative py-20 lg:py-24 bg-[var(--gradient-primary)] overflow-hidden">
+      <section className="relative py-20 lg:py-24 bg-brand-primary overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_30%,white,transparent_60%)]" />
         <div className="relative container-pro grid lg:grid-cols-2 gap-10 items-center">
           <div className="text-white">

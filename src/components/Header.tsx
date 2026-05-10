@@ -30,7 +30,7 @@ export function Header() {
           : "bg-background border-b border-transparent"
       }`}
     >
-      <div className="h-1 bg-[var(--gradient-accent-bar)]" />
+      <div className="h-1 bg-brand-accent-bar" />
       <div className="container-pro flex items-center justify-between h-20">
         <Logo />
 

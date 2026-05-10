@@ -52,7 +52,7 @@ function ContactPage() {
           </div>
 
           <div className="lg:col-span-2">
-            <div className="bg-[var(--gradient-primary)] text-white p-8 sm:p-10 rounded-sm shadow-[var(--shadow-elegant)] h-full flex flex-col">
+            <div className="bg-brand-primary text-white p-8 sm:p-10 rounded-sm shadow-[var(--shadow-elegant)] h-full flex flex-col">
               <div className="h-14 w-14 rounded-sm bg-white/10 border border-white/20 flex items-center justify-center mb-6">
                 <MessageSquare className="h-6 w-6 text-white" />
               </div>

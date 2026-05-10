@@ -12,7 +12,7 @@ export function ExecutiveContactCard({ variant = "elevated" }: { variant?: "elev
         variant === "elevated" ? "shadow-[var(--shadow-elegant)]" : ""
       }`}
     >
-      <div className="absolute top-0 left-0 right-0 h-1 bg-[var(--gradient-accent-bar)] rounded-t-sm" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-brand-accent-bar rounded-t-sm" />
       <div className="flex items-start justify-between gap-4 mb-6">
         <div>
           <div className="text-[11px] font-bold tracking-[0.25em] uppercase text-secondary mb-2">
@@ -25,7 +25,7 @@ export function ExecutiveContactCard({ variant = "elevated" }: { variant?: "elev
             MD / CEO
           </div>
         </div>
-        <div className="hidden sm:flex h-14 w-14 items-center justify-center rounded-sm bg-[var(--gradient-primary)]">
+        <div className="hidden sm:flex h-14 w-14 items-center justify-center rounded-sm bg-brand-primary">
           <ShieldCheck className="h-7 w-7 text-white" />
         </div>
       </div>

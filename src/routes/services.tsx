@@ -54,7 +54,7 @@ function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-[var(--gradient-primary)] text-white">
+      <section className="py-20 bg-brand-primary text-white">
         <div className="container-pro grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-4 leading-tight">

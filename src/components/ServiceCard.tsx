@@ -9,7 +9,7 @@ export function ServiceCard({ service }: { service: Service }) {
         {service.number}
       </div>
       <div className="relative">
-        <div className="inline-flex h-14 w-14 items-center justify-center rounded-sm bg-[var(--gradient-primary)] mb-6 shadow-[var(--shadow-card)]">
+        <div className="inline-flex h-14 w-14 items-center justify-center rounded-sm bg-brand-primary mb-6 shadow-[var(--shadow-card)]">
           <Icon className="h-6 w-6 text-white" />
         </div>
         <h3 className="font-serif text-xl font-bold text-foreground mb-3 leading-snug pr-8">
