@@ -137,6 +137,9 @@
     @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold tracking-wide uppercase rounded-sm border-2 border-white/80 text-white bg-transparent transition-all;
   }
   .btn-outline-light:hover { background: white; color: var(--primary-deep); }
+  .bg-brand-hero { background: var(--gradient-hero); }
+  .bg-brand-primary { background: var(--gradient-primary); }
+  .bg-brand-accent-bar { background: var(--gradient-accent-bar); }
   .eyebrow {
     @apply inline-flex items-center gap-3 text-xs font-bold tracking-[0.25em] uppercase text-secondary;
   }
