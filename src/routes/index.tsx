@@ -67,12 +67,16 @@ function Index() {
               </h1>
               <div className="h-1 w-24 bg-secondary mb-8" />
               <p className="text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl mb-5">
-                Reliable, ethical, and results-driven professional services tailored
-                for individuals, SMEs, and corporate organizations.
+                A duly registered Nigerian professional services and consultancy
+                practice delivering governance-led advisory, risk and control
+                assurance, portfolio resolution and transaction support to
+                individuals, SMEs and corporate institutions.
               </p>
               <p className="text-base text-white/70 leading-relaxed max-w-2xl mb-10">
-                We deliver consultancy, recovery, verification, and facilitation services
-                with professionalism, confidentiality, and compliance.
+                Our engagements combine regulatory compliance, due diligence rigour
+                and senior-led execution — spanning financial reporting assurance,
+                non-performing loan recovery, KYC/KYB field verification, licensed
+                asset intermediation and credit structuring.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/services" className="btn-secondary">
