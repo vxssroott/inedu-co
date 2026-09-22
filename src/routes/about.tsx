@@ -129,6 +129,32 @@ function AboutPage() {
         </div>
       </section>
 
+      <section className="py-20 lg:py-24 bg-primary-deep text-white">
+        <div className="container-pro">
+          <div className="max-w-3xl mb-12">
+            <div className="eyebrow !text-white/80 mb-5">
+              <span style={{ background: "var(--secondary)" }} />
+              Core Competencies
+            </div>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold leading-tight">
+              Technical capability across the professional services spectrum.
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {capabilities.map((c) => (
+              <div
+                key={c.t}
+                className="bg-white/5 border border-white/10 rounded-sm p-6 transition-colors hover:border-white/25"
+              >
+                <div className="h-1 w-10 bg-secondary mb-5" />
+                <h3 className="font-serif text-lg font-bold leading-snug mb-3">{c.t}</h3>
+                <p className="text-sm text-white/70 leading-relaxed">{c.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-accent/30 border-y border-border">
         <div className="container-pro">
           <div className="max-w-2xl mb-12">
