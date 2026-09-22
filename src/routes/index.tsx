@@ -213,6 +213,72 @@ function Index() {
           </div>
         </div>
       </section>
+      {/* ENGAGEMENT METHODOLOGY */}
+      <section className="py-20 lg:py-28 bg-background border-t border-border">
+        <div className="container-pro">
+          <div className="max-w-3xl mb-14">
+            <div className="eyebrow mb-5">Engagement Methodology</div>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+              A structured, audit-ready delivery framework.
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+              Every mandate follows a disciplined four-stage lifecycle designed to
+              protect confidentiality, satisfy regulatory scrutiny and produce
+              defensible, evidence-backed outcomes.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {methodology.map((m) => (
+              <div
+                key={m.step}
+                className="relative bg-card border border-border rounded-sm p-7 transition-all duration-300 hover:border-primary/40 hover:shadow-[var(--shadow-card)]"
+              >
+                <div className="flex items-center justify-between mb-5">
+                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-brand-primary">
+                    <m.icon className="h-5 w-5 text-white" />
+                  </div>
+                  <span className="font-serif text-3xl font-bold text-accent">{m.step}</span>
+                </div>
+                <h3 className="font-serif text-lg font-bold text-foreground mb-2 leading-snug">
+                  {m.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{m.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTORS SERVED */}
+      <section className="py-20 lg:py-24 bg-accent/30 border-t border-border">
+        <div className="container-pro grid lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-5">
+            <div className="eyebrow mb-5">Sectors Served</div>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-6 leading-tight">
+              Institutional depth across regulated markets.
+            </h2>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              We advise institutions operating under CBN, CAC and sector-specific
+              regulatory oversight, as well as privately held enterprises seeking
+              formalised governance and financing readiness.
+            </p>
+          </div>
+          <div className="lg:col-span-7">
+            <div className="grid sm:grid-cols-2 gap-3">
+              {sectors.map((s) => (
+                <div
+                  key={s}
+                  className="flex items-center gap-3 bg-card border border-border rounded-sm px-5 py-4"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-secondary shrink-0" />
+                  <span className="text-sm font-medium text-foreground">{s}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="relative py-20 lg:py-24 bg-brand-primary overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_30%,white,transparent_60%)]" />
         <div className="relative container-pro grid lg:grid-cols-2 gap-10 items-center">
