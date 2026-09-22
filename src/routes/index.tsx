@@ -47,6 +47,48 @@ const trustValues = [
   { icon: Users, t: "Executive Expertise", d: "Senior-led engagements and strategic decision support" },
 ];
 
+const methodology = [
+  {
+    step: "01",
+    icon: Search,
+    title: "Scoping & Due Diligence",
+    detail:
+      "Mandate definition, stakeholder mapping, risk profiling and baseline documentary review.",
+  },
+  {
+    step: "02",
+    icon: ClipboardList,
+    title: "Strategy & Structuring",
+    detail:
+      "Engagement terms, compliance checkpoints, deliverable architecture and measurable success criteria.",
+  },
+  {
+    step: "03",
+    icon: Cog,
+    title: "Execution & Field Work",
+    detail:
+      "Senior-supervised delivery, field verification, negotiation and evidence capture at every stage.",
+  },
+  {
+    step: "04",
+    icon: FileCheck,
+    title: "Reporting & Assurance",
+    detail:
+      "Audit-ready reporting, recommendations, remediation tracking and confidential close-out.",
+  },
+];
+
+const sectors = [
+  "Microfinance Banks & Fintech Operators",
+  "Commercial & Merchant Banking",
+  "Asset Management & Trade Finance",
+  "Insurance, Pensions & Capital Markets",
+  "Manufacturing, Trade & Distribution",
+  "Oil, Gas & Energy Services",
+  "Public Sector & Development Institutions",
+  "SMEs, Entrepreneurs & High-Net-Worth Individuals",
+];
+
 function Index() {
   return (
     <>
