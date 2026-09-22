@@ -91,10 +91,24 @@ function AboutPage() {
               and facilitation services, with a strong focus on professionalism,
               confidentiality, and compliance.
             </p>
+            <p className="text-base text-muted-foreground leading-relaxed mb-6">
+              The firm operates at the convergence of corporate governance, financial
+              assurance and credit risk management. Our practitioners bring practical
+              command of internal control frameworks, IFRS-aligned financial reporting,
+              non-performing loan resolution, KYC/KYB due diligence and regulated
+              transaction intermediation across CBN-supervised and privately held
+              institutions.
+            </p>
+            <p className="text-base text-muted-foreground leading-relaxed mb-6">
+              Each mandate is delivered through a documented engagement lifecycle —
+              scoping and due diligence, strategy and structuring, supervised execution,
+              and audit-ready reporting — so that outcomes are measurable, defensible
+              and capable of withstanding regulatory and board-level scrutiny.
+            </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
               Our goal is to provide dependable professional support that helps clients
-              make better business decisions, recover value, and execute critical
-              transactions with confidence.
+              make better business decisions, recover value, strengthen control
+              environments, and execute critical transactions with confidence.
             </p>
             <Link to="/services" className="btn-primary">
               View Our Services <ArrowRight className="h-4 w-4" />
