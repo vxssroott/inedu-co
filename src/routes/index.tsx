@@ -1,5 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Award, Users, BadgeCheck, Check } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Award,
+  Users,
+  BadgeCheck,
+  Check,
+  Search,
+  ClipboardList,
+  Cog,
+  FileCheck,
+} from "lucide-react";
 import heroImg from "@/assets/hero-skyline.jpg";
 import logoImg from "@/assets/inedu-logo.jpeg";
 import { ExecutiveContactCard } from "@/components/ExecutiveContactCard";
