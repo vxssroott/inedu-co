@@ -24,12 +24,42 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   const principles = [
-    "Professionalism in every engagement",
-    "Strict client confidentiality",
-    "Ethical, compliance-driven practice",
-    "Results-oriented execution",
-    "Senior executive oversight",
-    "Tailored solutions for each client",
+    "Professionalism and partner-level supervision in every engagement",
+    "Strict client confidentiality and secure data handling",
+    "Ethical, compliance-driven practice aligned to regulatory expectations",
+    "Results-oriented execution measured against defined deliverables",
+    "Senior executive oversight from mandate to close-out",
+    "Tailored, sector-specific solutions rather than templated advice",
+    "Evidence-backed, audit-ready documentation and reporting",
+    "Conflict-of-interest screening and independent professional judgement",
+    "Continuous capacity building and technical competency development",
+  ];
+
+  const capabilities = [
+    {
+      t: "Governance, Risk & Internal Control",
+      d: "Control environment reviews, segregation-of-duties assessment, policy frameworks and risk & control self-assessment (RCSA).",
+    },
+    {
+      t: "Financial Assurance & Reporting",
+      d: "Audited financial statements support, IFRS-aligned reporting, management accounts and board-level reporting packs.",
+    },
+    {
+      t: "Credit & Portfolio Resolution",
+      d: "Non-performing loan triage, skip tracing, negotiated settlement structuring and pre-litigation enforcement liaison.",
+    },
+    {
+      t: "Due Diligence & Verification",
+      d: "KYC/KYB validation, residential and business address verification, guarantor confirmation and documented field evidence.",
+    },
+    {
+      t: "Regulated Transaction Advisory",
+      d: "MFB licence transfers, trade finance instruments, PSSP acquisition support and counterparty due diligence.",
+    },
+    {
+      t: "Capital Access & Credit Structuring",
+      d: "Bankability assessment, facility packaging, lender engagement and post-disbursement monitoring.",
+    },
   ];
 
   return (
