@@ -1,5 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Award, Users, BadgeCheck, Check } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Award,
+  Users,
+  BadgeCheck,
+  Check,
+  Search,
+  ClipboardList,
+  Cog,
+  FileCheck,
+} from "lucide-react";
 import heroImg from "@/assets/hero-skyline.jpg";
 import logoImg from "@/assets/inedu-logo.jpeg";
 import { ExecutiveContactCard } from "@/components/ExecutiveContactCard";
@@ -36,6 +47,48 @@ const trustValues = [
   { icon: Users, t: "Executive Expertise", d: "Senior-led engagements and strategic decision support" },
 ];
 
+const methodology = [
+  {
+    step: "01",
+    icon: Search,
+    title: "Scoping & Due Diligence",
+    detail:
+      "Mandate definition, stakeholder mapping, risk profiling and baseline documentary review.",
+  },
+  {
+    step: "02",
+    icon: ClipboardList,
+    title: "Strategy & Structuring",
+    detail:
+      "Engagement terms, compliance checkpoints, deliverable architecture and measurable success criteria.",
+  },
+  {
+    step: "03",
+    icon: Cog,
+    title: "Execution & Field Work",
+    detail:
+      "Senior-supervised delivery, field verification, negotiation and evidence capture at every stage.",
+  },
+  {
+    step: "04",
+    icon: FileCheck,
+    title: "Reporting & Assurance",
+    detail:
+      "Audit-ready reporting, recommendations, remediation tracking and confidential close-out.",
+  },
+];
+
+const sectors = [
+  "Microfinance Banks & Fintech Operators",
+  "Commercial & Merchant Banking",
+  "Asset Management & Trade Finance",
+  "Insurance, Pensions & Capital Markets",
+  "Manufacturing, Trade & Distribution",
+  "Oil, Gas & Energy Services",
+  "Public Sector & Development Institutions",
+  "SMEs, Entrepreneurs & High-Net-Worth Individuals",
+];
+
 function Index() {
   return (
     <>
@@ -67,12 +120,16 @@ function Index() {
               </h1>
               <div className="h-1 w-24 bg-secondary mb-8" />
               <p className="text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl mb-5">
-                Reliable, ethical, and results-driven professional services tailored
-                for individuals, SMEs, and corporate organizations.
+                A duly registered Nigerian professional services and consultancy
+                practice delivering governance-led advisory, risk and control
+                assurance, portfolio resolution and transaction support to
+                individuals, SMEs and corporate institutions.
               </p>
               <p className="text-base text-white/70 leading-relaxed max-w-2xl mb-10">
-                We deliver consultancy, recovery, verification, and facilitation services
-                with professionalism, confidentiality, and compliance.
+                Our engagements combine regulatory compliance, due diligence rigour
+                and senior-led execution — spanning financial reporting assurance,
+                non-performing loan recovery, KYC/KYB field verification, licensed
+                asset intermediation and credit structuring.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/services" className="btn-secondary">
@@ -125,14 +182,21 @@ function Index() {
               A trusted Nigerian professional services firm.
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-5">
-              Inedu & Co Professional Services is a duly registered Nigerian
+              Inedu &amp; Co Professional Services is a duly registered Nigerian
               professional services firm providing reliable, ethical, and
               results-driven support to individuals, SMEs, and corporate organizations.
             </p>
+            <p className="text-base text-muted-foreground leading-relaxed mb-5">
+              We operate at the intersection of corporate governance, financial
+              assurance and credit risk — deploying structured methodologies across
+              internal control reviews, IFRS-aligned reporting support, non-performing
+              loan resolution, KYC/KYB due diligence and regulated transaction
+              intermediation.
+            </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
-              We deliver tailored solutions across consultancy, recovery, verification,
-              and facilitation services — with a strong focus on professionalism,
-              confidentiality, and compliance.
+              Every mandate is partner-supervised, documented to audit-ready standards,
+              and executed under strict confidentiality, regulatory compliance and
+              defensible professional judgement.
             </p>
             <Link to="/about" className="btn-primary">
               Learn More <ArrowRight className="h-4 w-4" />
@@ -202,6 +266,72 @@ function Index() {
           </div>
         </div>
       </section>
+      {/* ENGAGEMENT METHODOLOGY */}
+      <section className="py-20 lg:py-28 bg-background border-t border-border">
+        <div className="container-pro">
+          <div className="max-w-3xl mb-14">
+            <div className="eyebrow mb-5">Engagement Methodology</div>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+              A structured, audit-ready delivery framework.
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+              Every mandate follows a disciplined four-stage lifecycle designed to
+              protect confidentiality, satisfy regulatory scrutiny and produce
+              defensible, evidence-backed outcomes.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {methodology.map((m) => (
+              <div
+                key={m.step}
+                className="relative bg-card border border-border rounded-sm p-7 transition-all duration-300 hover:border-primary/40 hover:shadow-[var(--shadow-card)]"
+              >
+                <div className="flex items-center justify-between mb-5">
+                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-brand-primary">
+                    <m.icon className="h-5 w-5 text-white" />
+                  </div>
+                  <span className="font-serif text-3xl font-bold text-accent">{m.step}</span>
+                </div>
+                <h3 className="font-serif text-lg font-bold text-foreground mb-2 leading-snug">
+                  {m.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{m.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTORS SERVED */}
+      <section className="py-20 lg:py-24 bg-accent/30 border-t border-border">
+        <div className="container-pro grid lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-5">
+            <div className="eyebrow mb-5">Sectors Served</div>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-6 leading-tight">
+              Institutional depth across regulated markets.
+            </h2>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              We advise institutions operating under CBN, CAC and sector-specific
+              regulatory oversight, as well as privately held enterprises seeking
+              formalised governance and financing readiness.
+            </p>
+          </div>
+          <div className="lg:col-span-7">
+            <div className="grid sm:grid-cols-2 gap-3">
+              {sectors.map((s) => (
+                <div
+                  key={s}
+                  className="flex items-center gap-3 bg-card border border-border rounded-sm px-5 py-4"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-secondary shrink-0" />
+                  <span className="text-sm font-medium text-foreground">{s}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="relative py-20 lg:py-24 bg-brand-primary overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_30%,white,transparent_60%)]" />
         <div className="relative container-pro grid lg:grid-cols-2 gap-10 items-center">

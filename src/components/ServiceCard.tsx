@@ -1,14 +1,15 @@
+import { Check } from "lucide-react";
 import type { Service } from "@/lib/services";
 
 export function ServiceCard({ service }: { service: Service }) {
   const Icon = service.icon;
   return (
-    <div className="group relative bg-card border border-border rounded-sm p-8 transition-all duration-300 hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1 hover:border-primary/40 overflow-hidden">
+    <div className="group relative flex flex-col bg-card border border-border rounded-sm p-8 transition-all duration-300 hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1 hover:border-primary/40 overflow-hidden">
       <div className="absolute top-0 left-0 h-0.5 w-0 bg-secondary group-hover:w-full transition-all duration-500" />
       <div className="absolute top-6 right-6 font-serif text-5xl font-bold text-accent group-hover:text-primary/10 transition-colors">
         {service.number}
       </div>
-      <div className="relative">
+      <div className="relative flex flex-col h-full">
         <div className="inline-flex h-14 w-14 items-center justify-center rounded-sm bg-brand-primary mb-6 shadow-[var(--shadow-card)]">
           <Icon className="h-6 w-6 text-white" />
         </div>
@@ -16,6 +17,20 @@ export function ServiceCard({ service }: { service: Service }) {
           {service.title}
         </h3>
         <p className="text-sm leading-relaxed text-muted-foreground">{service.description}</p>
+
+        <div className="mt-6 pt-6 border-t border-border">
+          <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary mb-3">
+            Core Capabilities
+          </div>
+          <ul className="space-y-2.5">
+            {service.capabilities.map((c) => (
+              <li key={c} className="flex items-start gap-2.5">
+                <Check className="h-3.5 w-3.5 text-secondary mt-1 shrink-0" strokeWidth={3} />
+                <span className="text-[13px] leading-relaxed text-muted-foreground">{c}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

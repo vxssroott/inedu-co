@@ -24,12 +24,42 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   const principles = [
-    "Professionalism in every engagement",
-    "Strict client confidentiality",
-    "Ethical, compliance-driven practice",
-    "Results-oriented execution",
-    "Senior executive oversight",
-    "Tailored solutions for each client",
+    "Professionalism and partner-level supervision in every engagement",
+    "Strict client confidentiality and secure data handling",
+    "Ethical, compliance-driven practice aligned to regulatory expectations",
+    "Results-oriented execution measured against defined deliverables",
+    "Senior executive oversight from mandate to close-out",
+    "Tailored, sector-specific solutions rather than templated advice",
+    "Evidence-backed, audit-ready documentation and reporting",
+    "Conflict-of-interest screening and independent professional judgement",
+    "Continuous capacity building and technical competency development",
+  ];
+
+  const capabilities = [
+    {
+      t: "Governance, Risk & Internal Control",
+      d: "Control environment reviews, segregation-of-duties assessment, policy frameworks and risk & control self-assessment (RCSA).",
+    },
+    {
+      t: "Financial Assurance & Reporting",
+      d: "Audited financial statements support, IFRS-aligned reporting, management accounts and board-level reporting packs.",
+    },
+    {
+      t: "Credit & Portfolio Resolution",
+      d: "Non-performing loan triage, skip tracing, negotiated settlement structuring and pre-litigation enforcement liaison.",
+    },
+    {
+      t: "Due Diligence & Verification",
+      d: "KYC/KYB validation, residential and business address verification, guarantor confirmation and documented field evidence.",
+    },
+    {
+      t: "Regulated Transaction Advisory",
+      d: "MFB licence transfers, trade finance instruments, PSSP acquisition support and counterparty due diligence.",
+    },
+    {
+      t: "Capital Access & Credit Structuring",
+      d: "Bankability assessment, facility packaging, lender engagement and post-disbursement monitoring.",
+    },
   ];
 
   return (
@@ -61,10 +91,24 @@ function AboutPage() {
               and facilitation services, with a strong focus on professionalism,
               confidentiality, and compliance.
             </p>
+            <p className="text-base text-muted-foreground leading-relaxed mb-6">
+              The firm operates at the convergence of corporate governance, financial
+              assurance and credit risk management. Our practitioners bring practical
+              command of internal control frameworks, IFRS-aligned financial reporting,
+              non-performing loan resolution, KYC/KYB due diligence and regulated
+              transaction intermediation across CBN-supervised and privately held
+              institutions.
+            </p>
+            <p className="text-base text-muted-foreground leading-relaxed mb-6">
+              Each mandate is delivered through a documented engagement lifecycle —
+              scoping and due diligence, strategy and structuring, supervised execution,
+              and audit-ready reporting — so that outcomes are measurable, defensible
+              and capable of withstanding regulatory and board-level scrutiny.
+            </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
               Our goal is to provide dependable professional support that helps clients
-              make better business decisions, recover value, and execute critical
-              transactions with confidence.
+              make better business decisions, recover value, strengthen control
+              environments, and execute critical transactions with confidence.
             </p>
             <Link to="/services" className="btn-primary">
               View Our Services <ArrowRight className="h-4 w-4" />
@@ -81,6 +125,32 @@ function AboutPage() {
               height={896}
               className="relative w-full h-[420px] object-cover rounded-sm shadow-[var(--shadow-elegant)]"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-24 bg-primary-deep text-white">
+        <div className="container-pro">
+          <div className="max-w-3xl mb-12">
+            <div className="eyebrow !text-white/80 mb-5">
+              <span style={{ background: "var(--secondary)" }} />
+              Core Competencies
+            </div>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold leading-tight">
+              Technical capability across the professional services spectrum.
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {capabilities.map((c) => (
+              <div
+                key={c.t}
+                className="bg-white/5 border border-white/10 rounded-sm p-6 transition-colors hover:border-white/25"
+              >
+                <div className="h-1 w-10 bg-secondary mb-5" />
+                <h3 className="font-serif text-lg font-bold leading-snug mb-3">{c.t}</h3>
+                <p className="text-sm text-white/70 leading-relaxed">{c.d}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
