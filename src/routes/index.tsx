@@ -129,14 +129,21 @@ function Index() {
               A trusted Nigerian professional services firm.
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-5">
-              Inedu & Co Professional Services is a duly registered Nigerian
+              Inedu &amp; Co Professional Services is a duly registered Nigerian
               professional services firm providing reliable, ethical, and
               results-driven support to individuals, SMEs, and corporate organizations.
             </p>
+            <p className="text-base text-muted-foreground leading-relaxed mb-5">
+              We operate at the intersection of corporate governance, financial
+              assurance and credit risk — deploying structured methodologies across
+              internal control reviews, IFRS-aligned reporting support, non-performing
+              loan resolution, KYC/KYB due diligence and regulated transaction
+              intermediation.
+            </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
-              We deliver tailored solutions across consultancy, recovery, verification,
-              and facilitation services — with a strong focus on professionalism,
-              confidentiality, and compliance.
+              Every mandate is partner-supervised, documented to audit-ready standards,
+              and executed under strict confidentiality, regulatory compliance and
+              defensible professional judgement.
             </p>
             <Link to="/about" className="btn-primary">
               Learn More <ArrowRight className="h-4 w-4" />
